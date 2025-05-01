@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aivara | AI-Powered Digital Solutions</title>
+  <title>InnoVara | AI-Powered Digital Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -19,22 +19,29 @@
     }
 
     header {
-      padding: 60px 20px;
+      padding: 40px 20px 20px;
       text-align: center;
       background: linear-gradient(to bottom, #2c2c2c, #111);
     }
 
+    header img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
     .highlight {
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 600;
-      color: #d4af37;
+      color: #ffd700;
       animation: neonGlow 1.5s infinite alternate;
     }
 
     @keyframes neonGlow {
       from {
-        text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
       }
+
       to {
         text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700;
       }
@@ -44,12 +51,12 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      background: #1a1a1a;
+      background: #2e2e2e;
       padding: 15px 0;
     }
 
     nav a {
-      color: #d4af37;
+      color: #ffd700;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
@@ -67,7 +74,7 @@
     .section-title {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #d4af37;
+      color: #ffd700;
       font-weight: 600;
     }
 
@@ -127,8 +134,12 @@
     }
 
     @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     footer {
@@ -138,17 +149,46 @@
       text-align: center;
       font-size: 0.9rem;
     }
+
+    footer p {
+      color: #bbb;
+    }
+
+    /* Contact Section */
+    #contact form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    #contact input, #contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #contact button {
+      margin-top: 15px;
+      width: 100%;
+    }
   </style>
 </head>
+
 <body>
   <div class="marquee">
     <span>
-      🔥 AI Tools | 🤖 Automation | 📞 Voice Support | ✍️ Data Entry | 📦 E-commerce Fulfillment | 🧠 AI-Powered Strategy | 🌍 Global Services | 💼 BPO + Tech Integration | 📈 Growth Campaigns | 💬 Chatbots | 🧬 Voice Biometrics | 🌐 Aivara - Future Ready Digital Powerhouse
+      🔥 AI Tools | 🤖 Automation | 📞 Voice Support | ✍️ Data Entry | 📦 E-commerce Fulfillment | 🧠 AI-Powered Strategy | 🌍 Global Services | 💼 BPO + Tech Integration | 📈 Growth Campaigns | 💬 Chatbots | 🧬 Voice Biometrics | 🌐 InnoVara - Future Ready Digital Powerhouse
     </span>
   </div>
 
   <header>
-    <div class="highlight">Aivara</div>
+    <img src="images/logo.png" alt="InnoVara Logo">
+    <div class="highlight">InnoVara</div>
     <p>AI-Powered Digital Solutions for the Future</p>
   </header>
 
@@ -156,6 +196,8 @@
     <a href="#services">Services</a>
     <a href="#tools">AI Tools</a>
     <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#pricing">Pricing</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -204,15 +246,70 @@
     <p>Coming soon: Real success stories and featured AI-powered campaigns!</p>
   </section>
 
+  <section id="testimonials">
+    <h2 class="section-title">Client Testimonials</h2>
+    <div class="service-card">
+      <p>"InnoVara transformed our digital strategy. We saw a 300% ROI within 2 months!"</p>
+      <h3>- Priya Sharma, Marketing Lead</h3>
+    </div>
+    <div class="service-card">
+      <p>"Their AI automation tools saved us hours weekly. Highly recommended."</p>
+      <h3>- John D., E-commerce Owner</h3>
+    </div>
+    <div class="service-card">
+      <p>"Fast delivery, smart solutions, and premium support from start to finish."</p>
+      <h3>- Raghav Mehta, Startup Founder</h3>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2 class="section-title">Our Packages</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+      <div class="service-card">
+        <h3>Starter</h3>
+        <p>Ideal for small businesses</p>
+        <p><strong>₹4,999/month</strong></p>
+        <ul style="text-align: left; margin-top: 10px;">
+          <li>✓ 1 AI Tool Setup</li>
+          <li>✓ Basic Branding</li>
+          <li>✓ Email Support</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Professional</h3>
+        <p>Perfect for growing teams</p>
+        <p><strong>₹14,999/month</strong></p>
+        <ul style="text-align: left; margin-top: 10px;">
+          <li>✓ 3 AI Tools</li>
+          <li>✓ Custom Automation</li>
+          <li>✓ Priority Support</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Enterprise</h3>
+        <p>For large-scale operations</p>
+        <p><strong>₹29,999/month</strong></p>
+        <ul style="text-align: left; margin-top: 10px;">
+          <li>✓ Unlimited Tools</li>
+          <li>✓ Full Custom Setup</li>
+          <li>✓ 24/7 Dedicated Support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
-  <h2 class="section-title">Get in Touch</h2>
-  <p><a href="mailto:aakashverma8527@outlook.com" style="color: #ffd700; text-decoration: underline;">Email: aakashverma8527@outlook.com</a></p>
-  <p><a href="https://wa.me/918527879047" target="_blank" style="color: #ffd700; text-decoration: underline;">WhatsApp: +91-8527879047</a></p>
-  <a class="btn" href="mailto:aakashverma8527@outlook.com">Let's Talk</a>
-</section>
+    <h2 class="section-title">Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Aivara | Crafted by Aakash Verma | Serving Worldwide</p>
+    <p>&copy; 2025 InnoVara | All Rights Reserved</p>
   </footer>
 </body>
 </html>
