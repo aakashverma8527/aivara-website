@@ -14,15 +14,21 @@
     }
 
     body {
-      background: linear-gradient(to right, #0f172a, #1e293b);
       font-family: 'Poppins', sans-serif;
       color: #e0e0e0;
+      background: linear-gradient(to right, #0f172a, #1e293b);
     }
 
     header {
-      padding: 60px 20px;
       text-align: center;
+      padding: 80px 20px;
       background: linear-gradient(to bottom, #1e293b, #0f172a);
+      color: #fff;
+    }
+
+    header img {
+      width: 120px;
+      margin-bottom: 20px;
     }
 
     .highlight {
@@ -30,7 +36,7 @@
       font-weight: 600;
       color: #00b4d8;
       text-shadow: 0 0 20px rgba(0, 180, 216, 0.8);
-      animation: blink 3s step-start infinite; /* Slower blink speed */
+      animation: blink 3s step-start infinite;
     }
 
     @keyframes blink {
@@ -50,7 +56,7 @@
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 40px;
       background: #1a1a1a;
       padding: 15px 0;
     }
@@ -59,6 +65,7 @@
       color: #00b4d8;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1.2rem;
       transition: color 0.3s;
     }
 
@@ -66,32 +73,45 @@
       color: #ffffff;
     }
 
-    section {
-      padding: 60px 20px;
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #00b4d8;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       text-align: center;
     }
 
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #00b4d8;
-      font-weight: 600;
+    .service-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
     }
 
     .service-card {
       background-color: #1f2937;
       padding: 25px;
-      border-radius: 20px;
-      margin: 20px;
-      box-shadow: 0 0 25px rgba(0, 180, 216, 0.1);
-      display: inline-block;
+      border-radius: 15px;
       width: 300px;
+      box-shadow: 0 0 15px rgba(0, 180, 216, 0.1);
+      text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
+      color: #fff;
     }
 
     .service-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 0 30px rgba(0, 180, 216, 0.4);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
     .service-card h3 {
@@ -100,8 +120,13 @@
       font-weight: 600;
     }
 
+    .service-card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
     .btn {
-      padding: 14px 35px;
+      padding: 12px 30px;
       background: #00b4d8;
       color: #000;
       border: none;
@@ -118,31 +143,6 @@
       transform: scale(1.05);
     }
 
-    .marquee {
-      background: #0a0a0a;
-      color: #00b4d8;
-      padding: 10px;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .marquee span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll 25s linear infinite;
-      font-size: 1rem;
-    }
-
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
     footer {
       background: #0f172a;
       padding: 30px 20px;
@@ -155,13 +155,67 @@
       color: #bbb;
     }
 
-    /* Contact Form */
-    form {
-      max-width: 500px;
-      margin: 0 auto;
+    .marquee {
+      background: #0a0a0a;
+      color: #00b4d8;
+      padding: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 25s linear infinite;
+      font-size: 1.2rem;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .service-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        padding: 60px 20px;
+      }
+
+      .highlight {
+        font-size: 3rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .service-card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+
+    .contact-form {
       display: flex;
       flex-direction: column;
       gap: 15px;
+      background-color: #1f2937;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(0, 180, 216, 0.1);
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
     }
 
     input,
@@ -172,10 +226,6 @@
       font-size: 1rem;
       background: #fff;
       color: #000;
-    }
-
-    textarea {
-      resize: vertical;
     }
 
     input[type="submit"] {
@@ -201,7 +251,7 @@
   </div>
 
   <header>
-    <img src="images/logo.png.jpg.jpg" alt="InnoVara Logo" style="width: 150px; margin-bottom: 15px;">
+    <img src="images/logo.png.jpg" alt="InnoVara Logo">
     <div class="highlight">InnoVara</div>
     <p>AI-Powered Digital Solutions for the Future</p>
   </header>
@@ -215,94 +265,67 @@
 
   <section id="services">
     <h2 class="section-title">Our Services</h2>
-    <div class="service-card">
-      <h3>AI-Driven Marketing</h3>
-      <img src="images/ai-marketing.jpg" alt="AI Marketing" style="width: 100%; height: auto; border-radius: 15px;">
-      <p>Run intelligent campaigns with data-driven targeting and results tracking.</p>
-    </div>
-    <div class="service-card">
-      <h3>Automation Support</h3>
-      <img src="images/automation.jpg" alt="Automation" style="width: 100%; height: auto; border-radius: 15px;">
-      <p>Automate customer support, order handling, and internal processes using AI.</p>
-    </div>
-    <div class="service-card">
-      <h3>Branding & Design</h3>
-      <img src="images/branding.jpg" alt="Branding & Design" style="width: 100%; height: auto; border-radius: 15px;">
-      <p>Logo, banners, visuals, and identity crafted with smart design tools.</p>
-    </div>
-    <div class="service-card">
-      <h3>SEO & Web Analytics</h3>
-      <img src="images/seo-analytics.jpg" alt="SEO & Web Analytics" style="width: 100%; height: auto; border-radius: 15px;">
-      <p>Optimize your site, boost visibility and track performance with AI insights.</p>
+    <div class="service-container">
+      <div class="service-card">
+        <img src="images/ai-marketing.jpg" alt="AI Marketing">
+        <h3>AI-Driven Marketing</h3>
+        <p>Run intelligent campaigns with data-driven targeting and results tracking.</p>
+        <button class="btn">Explore</button>
+      </div>
+      <div class="service-card">
+        <img src="images/automation.jpg" alt="Automation">
+        <h3>Automation Support</h3>
+        <p>Automate customer support, order handling, and internal processes using AI.</p>
+        <button class="btn">Explore</button>
+      </div>
+      <div class="service-card">
+        <img src="images/branding.jpg" alt="Branding & Design">
+        <h3>Branding & Design</h3>
+        <p>Logo, banners, visuals, and identity crafted with smart design tools.</p>
+        <button class="btn">Explore</button>
+      </div>
+      <div class="service-card">
+        <img src="images/seo-analytics.jpg" alt="SEO & Web Analytics">
+        <h3>SEO & Web Analytics</h3>
+        <p>Optimize your site, boost visibility and track performance with AI insights.</p>
+        <button class="btn">Explore</button>
+      </div>
     </div>
   </section>
 
   <section id="tools">
     <h2 class="section-title">AI Tools</h2>
-    <div class="service-card">
-      <h3>Prompt Generator</h3>
-      <img src="images/prompt-tool.jpg" alt="Prompt Generator" style="width: 100%; height: auto; border-radius: 15px;">
-      <p>Create high-quality prompts for ChatGPT and other AI systems.</p>
-    </div>
-    <div class="service-card">
-      <h3>Content Wizard</h3>
-      <img src="images/content-ai.jpg" alt="Content Wizard" style="width: 100%; height: auto; border-radius: 15px;">
-      <p>Auto-generate blog posts, ad copy, and social captions in seconds.</p>
-    </div>
-    <div class="service-card">
-      <h3>Ad Funnel Builder</h3>
-      <img src="images/funnel-ai.jpg" alt="Ad Funnel Builder" style="width: 100%; height: auto; border-radius: 15px;">
-      <p>Set up one-click sales funnels with smart targeting and tracking.</p>
-    </div>
-    <div class="service-card">
-      <h3>AI SEO Planner</h3>
-      <img src="images/seo-planner.jpg" alt="AI SEO Planner" style="width: 100%; height: auto; border-radius: 15px;">
-      <p>Get optimized keywords and content strategies with a single click.</p>
-    </div>
-  </section>
-
-  <section id="portfolio">
-    <h2 class="section-title">Our Work</h2>
-    <p>Coming soon: Real success stories and featured AI-powered campaigns!</p>
-  </section>
-
-  <section id="testimonials">
-    <h2 class="section-title">Client Testimonials</h2>
-    <div class="service-card">
-      <p>"InnoVara transformed our digital strategy. We saw a 300% ROI within 2 months!"</p>
-      <h3>- Priya Sharma, Marketing Lead</h3>
-    </div>
-    <div class="service-card">
-      <p>"Their AI automation tools saved us hours weekly. Highly recommended."</p>
-      <h3>- John D., E-commerce Owner</h3>
-    </div>
-    <div class="service-card">
-      <p>"Fast delivery, smart solutions, and premium support from start to finish."</p>
-      <h3>- Raghav Mehta, Startup Founder</h3>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <h2 class="section-title">Our Packages</h2>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
-      <div style="background: #1e293b; padding: 20px; margin: 20px; border-radius: 10px; width: 300px;">
-        <h3>Basic Plan</h3>
-        <p>$199/month</p>
-        <p>Access to basic AI tools</p>
-        <button class="btn">Get Started</button>
+    <div class="service-container">
+      <div class="service-card">
+        <img src="images/prompt-tool.jpg" alt="Prompt Generator">
+        <h3>Prompt Generator</h3>
+        <p>Create high-quality prompts for ChatGPT and other AI systems.</p>
+        <button class="btn">Explore</button>
       </div>
-      <div style="background: #1e293b; padding: 20px; margin: 20px; border-radius: 10px; width: 300px;">
-        <h3>Premium Plan</h3>
-        <p>$499/month</p>
-        <p>Advanced AI tools & full support</p>
-        <button class="btn">Get Started</button>
+      <div class="service-card">
+        <img src="images/content-ai.jpg" alt="Content Wizard">
+        <h3>Content Wizard</h3>
+        <p>Auto-generate blog posts, ad copy, and social captions in seconds.</p>
+        <button class="btn">Explore</button>
+      </div>
+      <div class="service-card">
+        <img src="images/funnel-ai.jpg" alt="Ad Funnel Builder">
+        <h3>Ad Funnel Builder</h3>
+        <p>Set up one-click sales funnels with smart targeting and tracking.</p>
+        <button class="btn">Explore</button>
+      </div>
+      <div class="service-card">
+        <img src="images/seo-planner.jpg" alt="AI SEO Planner">
+        <h3>AI SEO Planner</h3>
+        <p>Get optimized keywords and content strategies with a single click.</p>
+        <button class="btn">Explore</button>
       </div>
     </div>
   </section>
 
   <section id="contact">
     <h2 class="section-title">Contact Us</h2>
-    <form action="submit-form.php" method="POST">
+    <form class="contact-form" action="submit-form.php" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Your Message" required></textarea>
