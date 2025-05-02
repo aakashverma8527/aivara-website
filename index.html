@@ -14,44 +14,34 @@
     }
 
     body {
-      background: linear-gradient(to right, #1c1c1c, #0a0a0a);
+      background: linear-gradient(to right, #0f172a, #1e293b);
       font-family: 'Poppins', sans-serif;
-      color: #f5f5f5;
+      color: #e0e0e0;
     }
 
     header {
       padding: 60px 20px;
       text-align: center;
-      background: linear-gradient(to bottom, #2c2c2c, #111);
+      background: linear-gradient(to bottom, #1e293b, #0f172a);
     }
 
     .highlight {
       font-size: 4rem;
       font-weight: 600;
-      color: #ffd700; /* Luxurious Gold */
-      animation: neonGlow 1.5s infinite alternate;
-    }
-
-    @keyframes neonGlow {
-      from {
-        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
-      }
-
-      to {
-        text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700;
-      }
+      color: #00b4d8;
+      text-shadow: 0 0 20px rgba(0, 180, 216, 0.8);
     }
 
     nav {
       display: flex;
       justify-content: center;
       gap: 20px;
-      background: #2e2e2e;
+      background: #1a1a1a;
       padding: 15px 0;
     }
 
     nav a {
-      color: #ffd700; /* Luxurious Gold */
+      color: #00b4d8;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
@@ -69,16 +59,16 @@
     .section-title {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #ffd700; /* Luxurious Gold */
+      color: #00b4d8;
       font-weight: 600;
     }
 
     .service-card {
-      background-color: #222;
+      background-color: #1f2937;
       padding: 25px;
       border-radius: 20px;
       margin: 20px;
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+      box-shadow: 0 0 25px rgba(0, 180, 216, 0.1);
       display: inline-block;
       width: 300px;
       transition: transform 0.3s, box-shadow 0.3s;
@@ -86,18 +76,18 @@
 
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+      box-shadow: 0 0 30px rgba(0, 180, 216, 0.4);
     }
 
     .service-card h3 {
-      color: #ffd700; /* Luxurious Gold */
+      color: #00b4d8;
       margin-bottom: 15px;
       font-weight: 600;
     }
 
     .btn {
       padding: 14px 35px;
-      background: #ffd700; /* Luxurious Gold */
+      background: #00b4d8;
       color: #000;
       border: none;
       border-radius: 30px;
@@ -114,8 +104,8 @@
     }
 
     .marquee {
-      background: #1a1a1a;
-      color: #ffd700; /* Luxurious Gold */
+      background: #0a0a0a;
+      color: #00b4d8;
       padding: 10px;
       overflow: hidden;
       white-space: nowrap;
@@ -139,7 +129,7 @@
     }
 
     footer {
-      background: #111;
+      background: #0f172a;
       padding: 30px 20px;
       color: #aaa;
       text-align: center;
@@ -147,7 +137,7 @@
     }
 
     footer p {
-      color: #bbb; /* Slightly lighter for footer text */
+      color: #bbb;
     }
   </style>
 </head>
@@ -160,7 +150,7 @@
   </div>
 
   <header>
-    <img src="images/logo.png.jpg" alt="InnoVara Logo" style="width: 150px;">
+    <img src="logo.png.jpg" alt="InnoVara Logo" style="width: 150px; margin-bottom: 15px;">
     <div class="highlight">InnoVara</div>
     <p>AI-Powered Digital Solutions for the Future</p>
   </header>
