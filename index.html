@@ -139,6 +139,41 @@
     footer p {
       color: #bbb;
     }
+
+    /* Contact Form */
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      background: #fff;
+      color: #000;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #00b4d8;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ffffff;
+      color: #000;
+    }
   </style>
 </head>
 
@@ -257,6 +292,16 @@
         </ul>
       </div>
     </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message">
+    </form>
   </section>
 
   <footer>
